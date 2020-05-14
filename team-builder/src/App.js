@@ -6,16 +6,16 @@ import Card from "./Card";
 function App() {
   const [members, setMembers] = useState([
     {
-      id: "1",
-      name: "Luke",
-      email: "muhammadadams@gmail.com",
-      role: "Developer",
+      id: "",
+      name: "",
+      email: "",
+      role: "",
     },
   ]);
 
   return (
     <div className="App">
-      <Form />
+      <Form members={members} />
       <Card />
     </div>
   );

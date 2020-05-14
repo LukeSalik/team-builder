@@ -1,12 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Form = (props) => {
+function Form(props) {
+  const teamMembers = props.members.map((member) => {
+    return (
+      <li>
+        <label htmlFor="name">Name</label>
+        <input value={""} onChange={() => {}} placeholder="Name" />
+
+        <label htmlFor="email">Email</label>
+        <input value={""} onChange={() => {}} placeholder="Email" />
+
+        <label htmlFor="role">Role</label>
+        <input value={""} onChange={() => {}} placeholder="Role" />
+      </li>
+    );
+  });
   return (
     <form>
-      <label htmlFor="name">Name</label>
-      <input id="email" type="text" name="email" place></input>
+      <ul>{teamMembers}</ul>
     </form>
   );
-};
-
+}
 export default Form;
+
+//hold Form state in this component
